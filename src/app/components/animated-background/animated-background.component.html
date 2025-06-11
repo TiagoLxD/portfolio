@@ -1,0 +1,12 @@
+<div class="animated-background">
+    <div class="gradient-background" [ngStyle]="getGradientStyle()"></div>
+    @for (particle of particles; track particle.id) {
+        <div class="particle" [ngStyle]="getParticleStyle(particle)"></div>
+    }
+
+    <div class="geometric-shape square"></div>
+    <div class="geometric-shape circle"></div>
+    <div class="geometric-shape rectangle" style="animation-delay: 2s"></div>
+
+    <div class="mesh-overlay"></div>
+</div>

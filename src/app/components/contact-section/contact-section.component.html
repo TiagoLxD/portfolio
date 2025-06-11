@@ -1,0 +1,187 @@
+<section id="contact" class="py-20 relative">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Entre em <span class="text-gradient">Contato</span>
+                </h2>
+                <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                    Pronto para criar algo incrível juntos? Entre em contato comigo para discutir seu próximo projeto.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="glass-effect rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">Vamos Conversar</h3>
+                        <p class="text-white/80 mb-8">
+                            Estou sempre interessado em novos desafios e oportunidades de colaboração. Se você tem um
+                            projeto em mente ou quer apenas bater um papo sobre tecnologia, ficarei feliz em conversar.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-mail"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Email</div>
+                                    <div class="text-white/70">tiagolazarinidev&#64;gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-phone"
+                                    >
+                                        <path
+                                            d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13 1.13.37 2.23.72 3.28a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c1.05.35 2.15.59 3.28.72A2 2 0 0 1 22 16.92z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Telefone</div>
+                                    <div class="text-white/70">+55 (19) 99581-0443</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-map-pin"
+                                    >
+                                        <path
+                                            d="M21 10.5c0 10.5-9 11.5-9 11.5S3 21 3 10.5C3 6.36 6.36 3 10.5 3S21 6.36 21 10.5z"
+                                        />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Localização</div>
+                                    <div class="text-white/70">São Paulo, Brasil</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Availability -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-white mb-4">Disponibilidade</h4>
+                        <div class="space-y-2 text-white/80">
+                            <div class="flex justify-between">
+                                <span>Freelance</span>
+                                <span class="text-green-400">Disponível</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Consultoria</span>
+                                <span class="text-green-400">Disponível</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Full-time</span>
+                                <span class="text-yellow-400">Considerando</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="glass-effect rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Envie uma Mensagem</h3>
+                    <form (submit)="handleSubmit($event)" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2"> Nome </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                [value]="formData().name"
+                                (input)="handleChange('name', $event)"
+                                required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-400 transition-colors"
+                                placeholder="Seu nome completo"
+                            />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2"> Email </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                [value]="formData().email"
+                                (input)="handleChange('email', $event)"
+                                required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-400 transition-colors"
+                                placeholder="seu@email.com"
+                            />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-white font-medium mb-2"> Mensagem </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                [value]="formData().message"
+                                (input)="handleChange('message', $event)"
+                                required
+                                rows="5"
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-400 transition-colors resize-none"
+                                placeholder="Conte-me sobre seu projeto..."
+                            ></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-white hover:scale-105 transition-transform duration-300 flex items-center justify-center space-x-2"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-send mr-2"
+                            >
+                                <path d="m22 2-7 20-4-9-9-4 20-7Z" />
+                                <path d="M22 2 11 13" />
+                            </svg>
+                            <span>Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

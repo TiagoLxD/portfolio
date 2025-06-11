@@ -1,0 +1,168 @@
+<section id="about" class="py-32 relative content-overlay">
+    <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Cyberpunk Section Title -->
+            <div class="text-center mb-20">
+                <div class="text-cyan-400 text-xl font-mono mb-4">&gt; about.execute()</div>
+                <h2 class="text-5xl md:text-7xl font-bold text-white mb-8 font-mono">
+                    SOBRE <span class="cyber-title">MIM</span>
+                </h2>
+                <p class="text-2xl text-white/80 max-w-4xl mx-auto font-mono">
+                    Transformando linhas de código em inovação digital há mais de 5 anos
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Left Column - Holographic Description -->
+                <div class="space-y-8">
+                    <div class="holo-glass rounded-3xl p-10 cyber-hover border border-cyan-400/30">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 text-cyan-400 mb-6"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white mb-6 font-mono">Minha Jornada Digital</h3>
+                        <div class="space-y-4 text-white/80 font-mono leading-relaxed">
+                            <p>
+                                <span class="text-green-400">$</span> Iniciei como desenvolvedor frontend, mas
+                                rapidamente evoluí para uma stack completa, dominando tanto backend quanto arquitetura
+                                de sistemas.
+                            </p>
+                            <p>
+                                <span class="text-magenta-400">$</span> Hoje como desenvolvedor fullstack, trabalho com
+                                diversas tecnologias para criar soluções que impactam a vida das pessoas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cyberpunk Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        @for (stat of stats(); track stat.label) {
+                            <div class="holo-glass rounded-2xl p-6 text-center cyber-hover border border-white/10">
+                                <div
+                                    [ngClass]="['text-4xl', 'font-bold', stat.color, 'mb-2', 'font-mono', 'neon-text']"
+                                >
+                                    {{ stat.value }}
+                                </div>
+                                <div class="text-white/60 text-sm font-mono">{{ stat.label }}</div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Right Column - Expertise Areas -->
+                <div class="space-y-8">
+                    @for (area of expertiseAreas; track area.title; let i = $index) {
+                        <div
+                            class="holo-glass rounded-2xl p-8 cyber-hover border border-white/10 reveal-rotate"
+                            [style.animationDelay]="i * 0.2 + 's'"
+                        >
+                            <div class="flex items-start space-x-6">
+                                <div [ngClass]="['p-4', 'rounded-xl', 'bg-gradient-to-r', area.color, 'shadow-lg']">
+                                    @switch (area.icon) {
+                                        @case ('brain') {
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="text-white"
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M12 9a6 6 0 0 0-6 6v2l-2 2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2l-2-2v-2a6 6 0 0 0-6-6Z"
+                                                />
+                                                <path d="M12 3v3" />
+                                                <path d="M18.7 8.7a4.95 4.95 0 0 0-6.9 0l-.3.3a4.95 4.95 0 0 0-6.9 0" />
+                                                <path d="M6 15v-2l-2-2" />
+                                                <path d="M18 15v-2l2-2" />
+                                            </svg>
+                                        }
+                                        @case ('cpu') {
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="text-white"
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+                                                <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2" />
+                                                <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" />
+                                                <path d="M12 12H9v3h3z" />
+                                                <path d="M12 12h3v-3h-3z" />
+                                                <path d="M12 12v-3h-3" />
+                                                <path d="M12 12h3v3" />
+                                            </svg>
+                                        }
+                                        @case ('cloud') {
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="text-white"
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M17.5 19H18a3 3 0 0 0 0-6h-.5A5 5 0 0 0 12 9a5 5 0 0 0-7.5 3h-.5A3 3 0 0 0 2 15h.5A4.5 4.05 0 0 0 7 19h10.5A2.5 2.5 0 0 0 20 16.5a2.5 2.5 0 0 0-2.5-2.5h-1.5"
+                                                />
+                                            </svg>
+                                        }
+                                        @case ('shield') {
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="text-white"
+                                                width="32"
+                                                height="32"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                            </svg>
+                                        }
+                                    }
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-2xl font-semibold text-white mb-3 font-mono">
+                                        {{ area.title }}
+                                    </h4>
+                                    <p class="text-white/70 leading-relaxed">
+                                        {{ area.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

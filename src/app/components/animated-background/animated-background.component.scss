@@ -1,0 +1,98 @@
+.animated-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.gradient-background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a, #581c87, #1e3a8a);
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+.geometric-shape {
+    position: absolute;
+
+    &.square {
+        top: 20px;
+        left: 10px;
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transform: rotate(45deg);
+        animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    &.circle {
+        bottom: 20px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2));
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    &.rectangle {
+        top: 50%;
+        left: 25%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(192, 132, 252, 0.3);
+        transform: rotate(12deg);
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+.mesh-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-20px) rotate(120deg);
+    }
+    66% {
+        transform: translateY(10px) rotate(240deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        transform: scale(1) rotate(45deg);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+        transform: scale(1.05) rotate(45deg);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

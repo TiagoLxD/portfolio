@@ -1,0 +1,256 @@
+<section id="skills" class="py-32 relative content-overlay">
+    <div class="container mx-auto px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <div class="text-green-400 text-xl font-mono mb-4">&gt; skills.display()</div>
+                <h2 class="text-5xl md:text-7xl font-bold text-white mb-8 font-mono">
+                    STACK <span class="cyber-title">TECNOLÓGICO</span>
+                </h2>
+                <p class="text-2xl text-white/80 max-w-4xl mx-auto font-mono">
+                    Dominando tecnologias de ponta para criar soluções do futuro
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-20">
+                @for (category of skillCategories; track category.title) {
+                    <div class="holo-glass rounded-3xl p-8 cyber-hover border" [ngClass]="category.borderColor">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="p-4 rounded-xl bg-gradient-to-r shadow-lg" [ngClass]="category.color">
+                                @switch (category.icon) {
+                                    @case ('code') {
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-white"
+                                            width="32"
+                                            height="32"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M16 18l6-6-6-6M8 6l-6 6 6 6"
+                                            />
+                                        </svg>
+                                    }
+                                    @case ('database') {
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-white"
+                                            width="32"
+                                            height="32"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <ellipse
+                                                cx="12"
+                                                cy="5"
+                                                rx="9"
+                                                ry="3"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                            />
+                                            <path
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                d="M21 5v14c0 1.657-4.03 3-9 3s-9-1.343-9-3V5"
+                                            />
+                                            <path
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"
+                                            />
+                                        </svg>
+                                    }
+                                    @case ('cloud') {
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-white"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="M17.5 19H18a3 3 0 0 0 0-6h-.5A5 5 0 0 0 12 9a5 5 0 0 0-7.5 3h-.5A3 3 0 0 0 2 15h.5A4.5 4.05 0 0 0 7 19h10.5A2.5 2.5 0 0 0 20 16.5a2.5 2.5 0 0 0-2.5-2.5h-1.5"
+                                            />
+                                        </svg>
+                                    }
+                                    @case ('cpu') {
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-white"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+                                            <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2" />
+                                            <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" />
+                                            <path d="M12 12H9v3h3z" />
+                                            <path d="M12 12h3v-3h-3z" />
+                                            <path d="M12 12v-3h-3" />
+                                            <path d="M12 12h3v3" />
+                                        </svg>
+                                    }
+                                    @case ('brain') {
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-white"
+                                            width="32"
+                                            height="32"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="M12 9a6 6 0 0 0-6 6v2l-2 2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2l-2-2v-2a6 6 0 0 0-6-6Z"
+                                            />
+                                            <path d="M12 3v3" />
+                                            <path d="M18.7 8.7a4.95 4.95 0 0 0-6.9 0l-.3.3a4.95 4.95 0 0 0-6.9 0" />
+                                            <path d="M6 15v-2l-2-2" />
+                                            <path d="M18 15v-2l2-2" />
+                                        </svg>
+                                    }
+                                }
+                            </div>
+                            <h3 class="text-2xl font-bold text-white font-mono">
+                                {{ category.title }}
+                            </h3>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            @for (skill of category.skills; track skill) {
+                                <div
+                                    class="px-4 py-3 holo-glass rounded-xl text-white font-mono text-center hover:scale-105 transition-all duration-300 border border-white/10 hover:border-current cyber-hover"
+                                >
+                                    {{ skill }}
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white mb-8 font-mono">
+                    EXPERTISE <span class="cyber-title">ADICIONAL</span>
+                </h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    @for (expertise of additionalExpertise; track expertise) {
+                        <span
+                            class="px-6 py-3 holo-glass rounded-full text-white/90 hover:text-white font-mono hover:scale-105 transition-all duration-500 border border-white/10 hover:border-cyan-400/50 cyber-hover"
+                        >
+                            {{ expertise }}
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                @for (stat of performanceMetrics(); track stat.label) {
+                    <div class="text-center holo-glass rounded-2xl p-6 cyber-hover border border-white/10">
+                        @switch (stat.icon) {
+                            @case ('cpu') {
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    [ngClass]="['w-8', 'h-8', stat.color, 'mx-auto', 'mb-3']"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+                                    <path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2" />
+                                    <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" />
+                                    <path d="M12 12H9v3h3z" />
+                                    <path d="M12 12h3v-3h-3z" />
+                                    <path d="M12 12v-3h-3" />
+                                    <path d="M12 12h3v3" />
+                                </svg>
+                            }
+                            @case ('shield') {
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    [ngClass]="['w-8', 'h-8', stat.color, 'mx-auto', 'mb-3']"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            }
+                            @case ('database') {
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    [ngClass]="['w-8', 'h-8', stat.color, 'mx-auto', 'mb-3']"
+                                    width="24"
+                                    height="24"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2" />
+                                    <path
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        d="M21 5v14c0 1.657-4.03 3-9 3s-9-1.343-9-3V5"
+                                    />
+                                    <path
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"
+                                    />
+                                </svg>
+                            }
+                            @case ('cloud') {
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    [ngClass]="['w-8', 'h-8', stat.color, 'mx-auto', 'mb-3']"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M17.5 19H18a3 3 0 0 0 0-6h-.5A5 5 0 0 0 12 9a5 5 0 0 0-7.5 3h-.5A3 3 0 0 0 2 15h.5A4.5 4.05 0 0 0 7 19h10.5A2.5 2.5 0 0 0 20 16.5a2.5 2.5 0 0 0-2.5-2.5h-1.5"
+                                    />
+                                </svg>
+                            }
+                        }
+                        <div [ngClass]="['text-3xl', 'font-bold', stat.color, 'mb-2', 'font-mono', 'neon-text']">
+                            {{ stat.metric }}
+                        </div>
+                        <div class="text-white/80 text-sm font-mono">{{ stat.label }}</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
