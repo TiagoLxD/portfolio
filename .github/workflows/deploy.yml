@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           rm -f package-lock.json
-          npm ci
+          npm i
 
       - name: Deploy to GitHub Pages
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
